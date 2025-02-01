@@ -1,5 +1,5 @@
-import React from 'react';
-import NavLink from './NavLink';
+import React from "react";
+import NavLink from "./NavLink";
 
 const MenuOverlay = ({ links }) => {
     return (
@@ -9,7 +9,6 @@ const MenuOverlay = ({ links }) => {
                     <NavLink href={link.path} title={link.title} />
                 </li>
             ))}
-
         </ul>
     );
 };

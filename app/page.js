@@ -1,10 +1,12 @@
-import Image from "next/image";
+import AboutSection from "./Components/About/AboutSection";
+import HeroSection from "./Components/HomeComponents/HeroSection";
+import ProjectsSection from "./Pages/Project/page";
 
 export default function Home() {
   return (
-    <>
-      <main>I am emon</main>
-    </>
-
+    <div className="container mt-24 mx-auto px-12 py-4">
+      <HeroSection />
+      <AboutSection />
+    </div>
   );
 }

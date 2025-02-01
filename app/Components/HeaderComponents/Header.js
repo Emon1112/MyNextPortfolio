@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -8,45 +8,31 @@ import MenuOverlay from "./MenuOverlay";
 const navLinks = [
     {
         title: "About",
-        path: "#about",
+        path: "/#about",
     },
     {
         title: "Projects",
-        path: "#projects",
+        path: "/Pages/Project",
     },
     {
         title: "Contact",
-        path: "#contact",
+        path: "/Pages/Contact",
     },
 ];
 
-const Navbar = () => {
+const Header = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
 
-    // Close the mobile menu when switching to desktop view
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth >= 768) {
-                setNavbarOpen(false);
-            }
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        // Cleanup listener on unmount
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     return (
-        <nav className="fixed mx-auto border border-slate-200 top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+        <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
             <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <Link
                     href={"/"}
-                    className="text-2xl md:text-5xl text-white font-semibold"
+                    className="text-2xl md:text-5xl text-pink-400 font-semibold"
                 >
-                    <p className="text-red-400">Emon</p>
+                    Emon
                 </Link>
-                <div className="mobile-menu block md:hidden">
+                <div className="block md:hidden">
                     {!navbarOpen ? (
                         <button
                             onClick={() => setNavbarOpen(true)}
@@ -78,4 +64,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;
