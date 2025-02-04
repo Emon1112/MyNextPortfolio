@@ -9,12 +9,17 @@ const TAB_DATA = [
         id: "skills",
         content: (
             <ul className="list-disc pl-2">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>PostgreSQL</li>
-                <li>Sequelize</li>
-                <li>JavaScript</li>
-                <li>React</li>
+                <li>React.js</li>
+                <li>Next.js</li>
+                <li>JavaScript (ES6+)
+                </li>
+                <li>Redux</li>
+                <li>Tailwind CSS </li>
+                <li>REST & GraphQL API Integration
+                </li>
+                <li>Framer Motion (for animations)</li>
+                <li>Git & GitHub
+                </li>
             </ul>
         ),
     },
@@ -23,8 +28,9 @@ const TAB_DATA = [
         id: "education",
         content: (
             <ul className="list-disc pl-2">
-                <li>Fullstack Academy of Code</li>
-                <li>University of California, Santa Cruz</li>
+                <h1 className="font-bold text-2xl">B.Sc. Engineering in CSE</h1>
+                <li><b>Institute:</b>Green University Of Bangladesh,Dhaka</li>
+                <li><b>Major:</b>Software Engineering</li>
             </ul>
         ),
     },
@@ -33,8 +39,8 @@ const TAB_DATA = [
         id: "certifications",
         content: (
             <ul className="list-disc pl-2">
-                <li>AWS Cloud Practitioner</li>
-                <li>Google Professional Cloud Developer</li>
+                <li>Industrial Training on front-end development at NextTech Ltd. bd.</li>
+                <li>Special Training on Front-end Development at Creative IT Institute,Dhaka,Bangladesh </li>
             </ul>
         ),
     },
@@ -51,19 +57,17 @@ const AboutSection = () => {
     };
 
     return (
-        <section className="text-white" id="about">
+        <section className="" id="about">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
                 <Image src="/images/life of a frontend web developer.png" width={500} height={500} alt="This is About image" />
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                    <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+                    <h2 className="text-4xl font-bold  mb-4">About Me</h2>
                     <p className="text-base lg:text-lg">
-                        I am a full stack web developer with a passion for creating
-                        interactive and responsive web applications. I have experience
-                        working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-                        Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-                        looking to expand my knowledge and skill set. I am a team player and
-                        I am excited to work with others to create amazing applications.
-                    </p>
+                        I am a React-based front-end developer with a passion for building interactive, high-performance, and user-friendly web applications.
+                        I specialize in JavaScript, React, Next.js,and Tailwind CSS, with a strong focus on optimizing web performance and creating seamless user experiences.
+                        I am proficient in integrating APIs (REST/GraphQL) and have experience with Git, version control, and modern front-end tools.
+                        As a fast learner, I continuously explore the latest technologies to enhance my skill set.
+                        I thrive in collaborative environments and am eager to contribute to innovative projects.                    </p>
                     <div className="flex flex-row justify-start mt-8">
                         <TabButton
                             selectTab={() => handleTabChange("skills")}
