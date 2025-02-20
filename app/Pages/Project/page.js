@@ -9,56 +9,30 @@ const projectsData = [
         id: 1,
         title: "React Portfolio Website",
         description: "Project 1 description",
-        image: "/images/projects/1.png",
+        image: "/images/Captureport.png",
         tag: ["All", "Web"],
         gitUrl: "/",
         previewUrl: "/",
     },
     {
         id: 2,
-        title: "Potography Portfolio Website",
+        title: "E-commerce Application",
         description: "Project 2 description",
-        image: "/images/projects/2.png",
+        image: "/images/Captureecommerce.png",
         tag: ["All", "Web"],
         gitUrl: "/",
         previewUrl: "/",
     },
     {
         id: 3,
-        title: "E-commerce Application",
+        title: "Hospital Info",
         description: "Project 3 description",
-        image: "/images/projects/3.png",
+        image: "/images/Capturehos.png",
         tag: ["All", "Web"],
         gitUrl: "/",
         previewUrl: "/",
     },
-    {
-        id: 4,
-        title: "Food Ordering Application",
-        description: "Project 4 description",
-        image: "/images/projects/4.png",
-        tag: ["All", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 5,
-        title: "React Firebase Template",
-        description: "Authentication and CRUD operations",
-        image: "/images/projects/5.png",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 6,
-        title: "Full-stack Roadmap",
-        description: "Project 5 description",
-        image: "/images/projects/6.png",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
+
 ];
 
 const ProjectsSection = () => {
@@ -80,8 +54,8 @@ const ProjectsSection = () => {
     };
 
     return (
-        <section id="projects" className="py-20">
-            <h2 className="text-center text-4xl font-bold  mt-4 mb-8 md:mb-12">
+        <section id="projects" className="py-20 min-h-screen">
+            <h2 className="text-center text-4xl font-bold mt-4 mb-8 md:mb-12">
                 My Projects
             </h2>
             <div className="flex flex-row justify-center items-center gap-2 py-6">
@@ -102,24 +76,28 @@ const ProjectsSection = () => {
                 />
             </div>
             <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-                {filteredProjects.map((project, index) => (
-                    <motion.li
-                        key={index}
-                        variants={cardVariants}
-                        initial="initial"
-                        animate={isInView ? "animate" : "initial"}
-                        transition={{ duration: 0.3, delay: index * 0.4 }}
-                    >
-                        <ProjectCard
-                            key={project.id}
-                            title={project.title}
-                            description={project.description}
-                            imgUrl={project.image}
-                            gitUrl={project.gitUrl}
-                            previewUrl={project.previewUrl}
-                        />
-                    </motion.li>
-                ))}
+                {filteredProjects.length > 0 ? (
+                    filteredProjects.map((project, index) => (
+                        <motion.li
+                            key={index}
+                            variants={cardVariants}
+                            initial="initial"
+                            animate={isInView ? "animate" : "initial"}
+                            transition={{ duration: 0.3, delay: index * 0.4 }}
+                        >
+                            <ProjectCard
+                                key={project.id}
+                                title={project.title}
+                                description={project.description}
+                                imgUrl={project.image}
+                                gitUrl={project.gitUrl}
+                                previewUrl={project.previewUrl}
+                            />
+                        </motion.li>
+                    ))
+                ) : (
+                    <p className="text-center text-3xl">Not yet created</p>
+                )}
             </ul>
         </section>
     );

@@ -33,7 +33,7 @@ const Header = () => {
                         />
                     </h1>
                     <p className=" text-base sm:text-lg mb-6 lg:text-xl font-serif">
-                        Passionate React.js Frontend Developer crafting seamless, high-performance web experiences with Next.js, Tailwind CSS, and modern UI frameworks.                    </p>
+                        Passionate React.js Frontend Developer crafting seamless, high-performance web experiences with Next.js, Tailwind CSS, and state management with context and redux.                    </p>
                     <div>
                         <Link
                             href="/Pages/Contact"
