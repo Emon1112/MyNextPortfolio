@@ -49,7 +49,7 @@ const Header = () => {
                         </button>
                     )}
                 </div>
-                <div className="menu hidden md:block md:w-auto" id="navbar">
+                <div className="menu hidden md:block md:w-auto">
                     <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
                         {navLinks.map((link, index) => (
                             <li key={index}>
@@ -59,7 +59,9 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
-            {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+            <div className={`md:hidden ${navbarOpen ? "block" : "hidden"}`}>
+                <MenuOverlay links={navLinks} />
+            </div>
         </nav>
     );
 };

@@ -40,12 +40,8 @@ const tabData = [
 
 const AboutSection = () => {
     const [tab, setTab] = useState("skills");
-    const [isPending, startTransition] = useTransition();
-
     const handleTabChange = (id) => {
-        startTransition(() => {
-            setTab(id);
-        });
+        setTab(id); // Update the active tab
     };
 
     return (
@@ -68,11 +64,11 @@ const AboutSection = () => {
                                 selectTab={() => handleTabChange(tabItem.id)}
                                 active={tab === tabItem.id}
                             >
-
                                 {tabItem.title}
                             </TabButton>
                         ))}
                     </div>
+
                     <div className="mt-8">
                         {tabData.find((t) => t.id === tab).content.map((item, index) => (
                             <div key={index}>
