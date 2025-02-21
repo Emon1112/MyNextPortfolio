@@ -14,7 +14,7 @@ const projectsData = [
         image: "/images/Captureport.png",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Emon1112/MyNextPortfolio",
-        previewUrl: "https://ecommerce-1-dy1d.vercel.app/",
+        previewUrl: "https://my-next-portfolio-md-emon-sheikhs-projects.vercel.app/",
     },
     {
         id: 2,
