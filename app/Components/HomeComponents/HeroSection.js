@@ -28,7 +28,7 @@ const Header = () => {
                                 1000,
                             ]}
                             wrapper="span"
-                            speed={50}
+                            speed={25}
                             repeat={Infinity}
                         />
                     </h1>
