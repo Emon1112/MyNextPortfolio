@@ -42,7 +42,7 @@ const Header = () => {
                             Hire Me
                         </Link>
                         <Link
-                            href="/c.v/Md.Emon Sheikh(Resume).pdf"
+                            href="/c.v/Md.Emon Sheikh(Resume).pdf" target="_blanc"
                             className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800  mt-3"
                         >
                             <span className="block  rounded-full px-5 py-2">
