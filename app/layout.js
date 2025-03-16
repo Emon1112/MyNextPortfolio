@@ -17,16 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Md. Emon Sheikh | Frontend Developer",
   description: "Personal portfolio of Md. Emon Sheikh, a passionate frontend developer specialized in React, Next.js, and modern web tech.",
-  keywords: [
-    "Md. Emon Sheikh",
-    "Frontend Developer",
-    "React Developer",
-    "Next.js Portfolio",
-    "Web Developer",
-    "Tailwind CSS",
-    "JavaScript",
-  ],
-  authors: [{ name: "Md. Emon Sheikh" }],
+  verification: {
+    google: "Wevh0EJoXv7Ph4SY5z0TrIfLqb1mESgSEd7pILyY-xc", // ✅ your code here
+  },
   openGraph: {
     title: "Md. Emon Sheikh | Frontend Developer",
     description: "Showcasing projects and skills in modern frontend development.",
@@ -34,16 +27,6 @@ export const metadata = {
     siteName: "Md. Emon Sheikh Portfolio",
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Md. Emon Sheikh | Frontend Developer",
-    description: "Frontend Developer Portfolio",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
   },
 };
 
